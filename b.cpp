@@ -96,9 +96,9 @@ void display() {
     glRotatef(180.0f, 0.0f, 0.0f, 1.0f);
     glScalef(0.9f, 0.9f, 1.0f);
     glBegin(GL_TRIANGLES);
-        glColor3f(1.0, 0.0, 0.0);
-        glVertex2f(-0.3, -0.1732f);
         glColor3f(0.0, 1.0, 0.0);
+        glVertex2f(-0.3, -0.1732f);
+        glColor3f(1.0, 0.0, 0.0);
         glVertex2f(0.3, -0.1732f);
         glColor3f(0.0, 0.0, 1.0);
         glVertex2f(0.0, 0.3464f);
