@@ -6,9 +6,11 @@ void display() {
 
 
 
+    // Red Square
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();  
     glTranslatef(-0.5f, 0.5f, 0.0f);
+    glRotatef(-40.0f, 0.0f, 0.0f, 1.0f);
     glBegin(GL_QUADS);
         glColor3f(1.0, 0.0, 0.0);  
         glVertex2f(-0.3, -0.3);
@@ -20,6 +22,7 @@ void display() {
 
 
 
+    // Green Square
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();  
     glTranslatef(-0.4f, -0.2f, 0.0f); 
@@ -34,67 +37,72 @@ void display() {
 
 
 
+    // White and Black Square
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     glTranslatef(-0.7f, -0.4f, 0.0f);
+    glScalef(1.2f, 1.2f, 1.0f);
     glBegin(GL_QUADS);
         glColor3f(1.0, 1.0, 1.0);
-        glVertex2f(-0.15 * 1.2, 0.15 * 1.2);
+        glVertex2f(-0.15, 0.15);
         glColor3f(0.0, 0.0, 0.0);
-        glVertex2f(0.15 * 1.2, 0.15 * 1.2);
+        glVertex2f(0.15, 0.15);
         glColor3f(1.0, 1.0, 1.0);
-        glVertex2f(0.15 * 1.2, -0.15 * 1.2);
+        glVertex2f(0.15, -0.15);
         glColor3f(0.0, 0.0, 0.0);
-        glVertex2f(-0.15 * 1.2, -0.15 * 1.2);
+        glVertex2f(-0.15, -0.15);
     glEnd();
 
 
 
 
+    // Yellow Hexagon
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     glTranslatef(0.5f, 0.5f, 0.0f);
+    glScalef(0.40f * 2.0, 0.40f * 2.0, 1.0f);
     glBegin(GL_POLYGON);
         glColor3f(1.0, 1.0, 0.0);
-        glVertex2f( 0.50f * 0.40,  0.00f * 0.40);
-        glVertex2f( 0.25f * 0.40,  0.433f * 0.40);
-        glVertex2f(-0.25f * 0.40,  0.433f * 0.40);
-        glVertex2f(-0.50f * 0.40,  0.00f * 0.40);
-        glVertex2f(-0.25f * 0.40, -0.443f * 0.40);
-        glVertex2f( 0.25f * 0.40, -0.443f * 0.40);
+        glVertex2f(0.50f, 0.00f);
+        glVertex2f(0.25f, 0.433f);
+        glVertex2f(-0.25f, 0.433f);
+        glVertex2f(-0.50f, 0.00f);
+        glVertex2f(-0.25f, -0.443f);
+        glVertex2f(0.25f, -0.443f);
     glEnd();
 
 
 
 
+    // Blue Triangle
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     glTranslatef(0.4f, -0.32f, 0.0f);
+    glScalef(0.9f, 0.9f, 1.0f);
     glBegin(GL_TRIANGLES);
         glColor3f(0.0, 0.0, 1.0);
-        glVertex2f(-0.3 * 0.9, -0.1732f * 0.9);
-        glVertex2f(0.3 * 0.9, -0.1732f * 0.9);
-        glVertex2f(0.0 * 0.9, 0.3464f * 0.9);
+        glVertex2f(-0.3, -0.1732f);
+        glVertex2f(0.3, -0.1732f);
+        glVertex2f(0.0, 0.3464f);
     glEnd();
 
 
 
 
+    // RGB Triangle
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     glTranslatef(0.6f, -0.4f, 0.0f);
     glRotatef(180.0f, 0.0f, 0.0f, 1.0f);
+    glScalef(0.9f, 0.9f, 1.0f);
     glBegin(GL_TRIANGLES);
         glColor3f(1.0, 0.0, 0.0);
-        glVertex2f(-0.3 * 0.9, -0.1732f * 0.9);
+        glVertex2f(-0.3, -0.1732f);
         glColor3f(0.0, 1.0, 0.0);
-        glVertex2f(0.3 * 0.9, -0.1732f * 0.9);
+        glVertex2f(0.3, -0.1732f);
         glColor3f(0.0, 0.0, 1.0);
-        glVertex2f(0.0 * 0.9, 0.3464f * 0.9);
+        glVertex2f(0.0, 0.3464f);
     glEnd();
-
-
-
 
     glFlush();
 }
